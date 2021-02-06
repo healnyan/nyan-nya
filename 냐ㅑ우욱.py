@@ -1,8 +1,9 @@
 import discord
+import os
 
 client = discord.Client()
 
-token = "ODA3MzEwMTQ5NDc5NDMyMjYz.YB2IKg.KCuWcGY2s9-HfHA2FP377Rjpj1Y"
+token = "ODA3MzEwMTQ5NDc5NDMyMjYz.YB2IKg.izCoexL445hAf_wZTvTDvBZIiH0"
 
 
 @client.event
@@ -697,4 +698,5 @@ async def on_message(message):
     if message.content == "냥냐 문희":
         await message.channel.send("문희는 뽀도가 먹구찌뿐뎅 .")
 
-client.run(token)
+access_token = os.environ["BOT_TOKEN"]        
+client.run(access_token)
